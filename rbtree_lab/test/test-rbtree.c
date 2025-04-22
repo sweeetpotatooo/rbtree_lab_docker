@@ -354,7 +354,7 @@ void test_find_erase(rbtree *t, const key_t *arr, const size_t n)
     node_t *p = rbtree_insert(t, arr[i]);
     assert(p != NULL);
   }
-
+  
   for (int i = 0; i < n; i++)
   {
     node_t *p = rbtree_find(t, arr[i]);
@@ -382,6 +382,8 @@ void test_find_erase(rbtree *t, const key_t *arr, const size_t n)
     q = rbtree_find(t, arr[i]);
     assert(q == NULL);
   }
+
+  
 }
 
 void test_find_erase_fixed()
